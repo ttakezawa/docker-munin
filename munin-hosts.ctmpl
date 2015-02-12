@@ -1,0 +1,5 @@
+{{range service "munin-node"}}
+[{{.Node}}.node.consul]
+  address {{.Address}}
+  port {{.Port}}
+{{end}}
