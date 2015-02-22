@@ -5,7 +5,7 @@ RUN apt-get update && \
       apache2 curl ca-certificates munin cron libapache2-mod-fcgid libcgi-fast-perl && \
     apt-get clean && rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
 
-ENV CT_VERSION=0.6.5
+ENV CT_VERSION=0.7.0
 RUN curl -L https://github.com/hashicorp/consul-template/releases/download/v${CT_VERSION}/consul-template_${CT_VERSION}_linux_amd64.tar.gz \
       | tar -C /usr/local/bin --strip-components 1 -zxvf -
 

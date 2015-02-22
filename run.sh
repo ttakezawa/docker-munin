@@ -1,6 +1,7 @@
 #!/bin/bash
 
-CONSUL_TEMPLATE_LOG=info consul-template \
+consul-template \
+  -log-level info \
   -consul=${CONSUL_PORT_8500_TCP_ADDR}:${CONSUL_PORT_8500_TCP_PORT} \
   -template "/etc/consul-templates/munin-hosts.ctmpl:/etc/munin/munin-conf.d/munin-hosts.conf" \
     >/consul-template.log 2>&1 &
