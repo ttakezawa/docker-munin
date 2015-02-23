@@ -21,5 +21,6 @@ COPY apache.conf /etc/apache2/sites-enabled/000-default.conf
 COPY munin-hosts.ctmpl /etc/consul-templates/
 COPY run.sh /usr/local/bin/run
 
+VOLUME /var/lib/munin
 EXPOSE 80
 CMD ["/usr/local/bin/run"]

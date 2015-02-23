@@ -1,5 +1,7 @@
 #!/bin/bash
 
+chown -R munin:www-data /var/lib/munin
+
 consul-template \
   -log-level info \
   -consul=${CONSUL_PORT_8500_TCP_ADDR}:${CONSUL_PORT_8500_TCP_PORT} \
