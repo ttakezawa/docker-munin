@@ -1,6 +1,7 @@
 #!/bin/bash
 
 chown -R munin:www-data /var/lib/munin
+chmod -R ug+rw          /var/lib/munin
 
 consul-template \
   -log-level info \
